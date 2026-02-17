@@ -5,19 +5,6 @@ import navigation from './components/navigation/navigation.vue'
 </script>
 
 <template>
-  <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/icon-tittle.png" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it! awok awok" />
-        <navigation />
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div> -->
-  </header>
-
   <RouterView />
 </template>
 
