@@ -9,6 +9,5 @@
 </template>
 
 <script setup lang="ts">
-// import { ref } from 'vue'
 import AppNavbar from '@/components/navigation/AppNavbar.vue'
 </script>
