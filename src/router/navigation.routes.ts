@@ -51,4 +51,14 @@ export const navigationRoutes: RouteRecordRaw[] = [
       showInNav: true,
     },
   },
+  {
+    path: 'guide',
+    name: 'guide',
+    component: () => import('@/views/GuideView.vue'),
+    meta: {
+      title: 'Guide',
+      icon: 'cil-info',
+      showInNav: true,
+    },
+  },
 ]

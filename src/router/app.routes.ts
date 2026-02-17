@@ -1,14 +1,14 @@
 import type { RouteRecordRaw } from 'vue-router'
 
 export const appRoutes: RouteRecordRaw[] = [
-  // {
-  //   path: '/login',
-  //   name: 'Login',
-  //   component: () => import('@/views/Login.vue')
-  // },
-  // {
-  //   path: '/:pathMatch(.*)*',
-  //   name: 'NotFound',
-  //   component: () => import('@/views/NotFound.vue')
-  // }
+  {
+    path: '/General-Settings',
+    name: 'General Settings',
+    component: () => import('@/views/GeneralSettings.vue'),
+  },
+  {
+    path: '/About',
+    name: 'About',
+    component: () => import('@/views/AboutView.vue'),
+  },
 ]
