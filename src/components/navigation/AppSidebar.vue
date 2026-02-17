@@ -35,7 +35,10 @@ console.log(navRoutes)
     "
   >
     <COffcanvasHeader>
-      <COffcanvasTitle>Offcanvas</COffcanvasTitle>
+      <COffcanvasTitle>
+        <img src="../../assets/icon-tittle.png" alt="" width="22" height="24" />
+        AI Curring Time
+      </COffcanvasTitle>
       <CCloseButton
         class="text-reset"
         @click="
