@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
+defineOptions({
+  name: 'HistoryView',
+})
+
 const historyData = ref([
   { id: 1, name: 'History 1', description: 'Description of History 1' },
   { id: 2, name: 'History 2', description: 'Description of History 2' },

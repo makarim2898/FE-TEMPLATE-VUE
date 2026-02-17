@@ -12,19 +12,10 @@ const toggleSidebar = () => {
 
 <template>
   <div class="layout">
-    <AppSidebar
-      :collapsed="collapsed"
-      @toggle="toggleSidebar"
-    />
+    <AppSidebar :collapsed="collapsed" @toggle="toggleSidebar" />
 
-    <div
-      class="main"
-      :class="{ expanded: collapsed }"
-    >
-      <AppNavbar
-        :collapsed="collapsed"
-        @toggle="toggleSidebar"
-      />
+    <div class="main" :class="{ expanded: collapsed }">
+      <AppNavbar :collapsed="collapsed" @toggle="toggleSidebar" />
 
       <div class="content">
         <slot />
@@ -49,7 +40,7 @@ const toggleSidebar = () => {
 
 .content {
   padding: 24px;
-  background: #f9fafb;
+  background: #2b4864;
   min-height: calc(100vh - 60px);
 }
 </style>
