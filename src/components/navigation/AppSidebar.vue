@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
 const navRoutes = router.getRoutes().filter((route) => route.meta?.showInNav)
 const showOffcanvas = ref(false)
 
+const isActive = (r: RouteRecordRaw) => r.name === route.name
 console.log(navRoutes)
 </script>
 
@@ -50,14 +53,19 @@ console.log(navRoutes)
     </COffcanvasHeader>
     <COffcanvasBody>
       <ul class="list-group list-group-flush">
-        <li v-for="route in navRoutes" :key="route.name" class="list-group-item">
+        <li
+          v-for="r in navRoutes"
+          :key="r.name"
+          class="list-group-item"
+          :class="{ 'bg-success text-white': isActive(r) }"
+        >
           <router-link
-            :to="{ name: route.name }"
+            :to="{ name: r.name }"
             class="text-decoration-none text-white"
             @click="showOffcanvas = false"
           >
-            <CIcon :icon="route.meta?.icon" class="me-2" />
-            {{ route.meta?.title }}
+            <CIcon :icon="r.meta?.icon" class="me-2" />
+            {{ r.meta?.title }}
           </router-link>
         </li>
       </ul>

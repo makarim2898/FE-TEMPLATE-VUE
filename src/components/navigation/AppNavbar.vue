@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import AppSidebar from '@/components/navigation/AppSidebar.vue'
+import { computed } from 'vue'
+
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const navbarTitle = computed(() => {
+  // kalau meta.title ada, tampilkan
+  return route.meta?.title ? `AI Curring Time - ${route.meta.title}` : 'AI Curring Time'
+})
 </script>
 
 <template>
@@ -7,7 +17,7 @@ import AppSidebar from '@/components/navigation/AppSidebar.vue'
     <CContainer fluid>
       <CNavbarBrand href="#">
         <AppSidebar />
-        AI Curring Time
+        {{ navbarTitle }}
       </CNavbarBrand>
     </CContainer>
   </CNavbar>
